@@ -4,10 +4,6 @@
 The purpose of the Pewlett Hackard Analysis was to help the company plan for it's future by analyzing data on the company's [departments](/Data/departments.csv), [department employees](/Data/dept_emp.csv), [department managers](/Data/dept_manager.csv),[employees](/Data/employees.csv), [salaries](/Data/salaries.csv), and [titles](/Data/titles.csv). The data analysis would help to determine who and how many employees will be retiring and require retirement packages in the coming future, and which positions will need to be filled in the wake of their retirement. This information, gathered into an employee database using SQL, will help future-proof Pewlett Hackard.
 
 ## Results
-Provide a bulleted list with four major points from the two analysis deliverables. Use images as support where needed.
-
-The analysis resulted in the following two tables:
-
 ### Number of Retiring Employees by Title
 SQL queries were written and executed to determine the number of retiring employees by title, which would be displayed in the `retiring_titles` table. The `retiring_titles` table contained the number of retirement-age employees (born between January 1, 1952 and December 31, 1955) by most recent job title who are about to retire.
 

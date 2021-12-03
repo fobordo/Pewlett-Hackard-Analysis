@@ -15,13 +15,13 @@ The `retiring_titles` table contained a count of how many employees per title wo
 
 The `retiring_titles` table led to the following two major findings:
 * The number of retiring employees and number of positions that will need to be filled for each title is as follows:
-** Senior Engineer: 29414
-** Senior Staff: 28254
-** Engineer: 14222
-** Staff: 12243
-** Technique Leader: 4502
-** Assistant Engineer: 1761
-** Manager: 2
+    * Senior Engineer: 29414
+    * Senior Staff: 28254
+    * Engineer: 14222
+    * Staff: 12243
+    * Technique Leader: 4502
+    * Assistant Engineer: 1761
+    * Manager: 2
 * 90,398 out of 300,024 total employees will be retiring. That's roughly 30% of the company's total employees, meaning 30% of positions will need to be filled once those employees retire.
 
 The SQL queries that yielded the `mentorship_eligibility` table led to the following two major findings:

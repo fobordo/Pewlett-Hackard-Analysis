@@ -49,3 +49,21 @@ INNER JOIN titles as t
 WHERE (de.to_date = '9999-01-01')
 	AND (e.birth_date BETWEEN '1965-01-01' AND '1965-12-31')
 ORDER BY de.emp_no;
+
+-----------------------DELIVERABLE 3-----------------------
+
+--Get total number of employees from employees table
+SELECT COUNT(emp_no)
+FROM employees;
+
+--Get total number of employees from mentorship_eligibility table
+SELECT COUNT(emp_no)
+FROM mentorship_eligibility;
+
+--Get distinct titles from mentorship_eligibility table
+SELECT DISTINCT ON (title) title
+FROM mentorship_eligibility;
+
+--Show mentorship_eligibility table
+SELECT *
+FROM mentorship_eligibility;

@@ -8,8 +8,8 @@ Provide a bulleted list with four major points from the two analysis deliverable
 
 The analysis resulted in the following two tables:
 
-### retiring_titles Table
-The `retiring_titles` table contained a count of how many employees per title would be retiring.
+### Number of Retiring Employees by Title
+SQL queries were written and executed to determine the number of retiring employees by title, which would be displayed in the `retiring_titles` table. The `retiring_titles` table contained the number of retirement-age employees (born between January 1, 1952 and December 31, 1955) by most recent job title who are about to retire.
 
 ![retiring_titles_pgadmin](/README_Images/retiring_titles_pgadmin.png)
 
@@ -24,11 +24,14 @@ The `retiring_titles` table led to the following two major findings:
     * Manager: 2
 * 90,398 out of 300,024 total employees will be retiring. That's roughly 30% of the company's total employees, meaning 30% of positions will need to be filled once those employees retire.
 
-The SQL queries that yielded the `mentorship_eligibility` table led to the following two major findings:
-*
-*
+### Employees Eligible for the Mentorship Program
+SQL queries were written and executed to determine which current employees would be eligible for the mentorship program, which would be displayed in the `mentorship_eligibility` table. The `mentorship_eligibility` table contained a database of current employees born between January 1, 1965 and December 31, 1965 and are eligible to participate in a mentorship program.
 
 ![mentorship_eligibility_pgadmin](/README_Images/mentorship_eligibility_pgadmin.png)
+
+The `mentorship_eligibility` table led to the following two major findings:
+*
+*
 
 ## Summary
 Provide high-level responses to the following questions, then provide two additional queries or tables that may provide more insight into the upcoming "silver tsunami."

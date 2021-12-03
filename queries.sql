@@ -219,3 +219,22 @@ INNER JOIN current_emp as ce
 SELECT *
 FROM manager_info;
 
+-- List of employees per department
+SELECT ce.emp_no,
+	ce.first_name,
+	ce.last_name,
+	d.dept_name
+INTO dept_info
+FROM current_emp as ce
+INNER JOIN dept_emp as de
+ON (ce.emp_no = de.emp_no)
+INNER JOIN departments as d
+ON (de.dept_no = d.dept_no);
+
+SELECT *
+FROM dept_info;
+
+-- Employees in the sales and development departments from dept_info
+SELECT *
+FROM dept_info
+WHERE dept_name IN ('Development', 'Sales');

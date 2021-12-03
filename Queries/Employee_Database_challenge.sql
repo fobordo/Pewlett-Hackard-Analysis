@@ -15,24 +15,40 @@ WHERE birth_date BETWEEN '1952-01-01' AND '1955-12-31';
 
 -- Create a new table from titles using the INTO clause.
 SELECT emp_no, title, from_date, to_date
-INTO retiring_titles
+INTO new_titles
 FROM titles;
 
 -- Join both tables on the primary key. Then, order by the employee number.
 SELECT re.emp_no,
 	re.first_name,
 	re.last_name,
-	rt.title,
-	rt.from_date,
-	rt.to_date
+	nt.title,
+	nt.from_date,
+	nt.to_date
 INTO retirement_titles
 FROM retiring_employees as re
-INNER JOIN retiring_titles as rt
-ON (re.emp_no = rt.emp_no)
+INNER JOIN new_titles as nt
+ON (re.emp_no = nt.emp_no)
 ORDER BY re.emp_no;
 
 -- Show retirement_titles
 SELECT *
 FROM retirement_titles;
 
--- Export the Retirement Titles table from the previous step as retirement_titles.csv and save it to your Data folder in the Pewlett-Hackard-Analysis folder.
+-- Use Dictinct with Orderby to remove duplicate rows
+SELECT DISTINCT ON (emp_no) emp_no,
+	first_name,
+	last_name,
+	title
+INTO unique_titles
+FROM retirement_titles
+ORDER BY emp_no, to_date DESC;
+
+-- First, retrieve the number of titles from the Unique Titles table.
+-- Then, create a Retiring Titles table to hold the required information.
+-- Group the table by title, then sort the count column in descending order.
+SELECT COUNT(unique_titles.title), title
+INTO retiring_titles
+FROM unique_titles
+GROUP BY title
+ORDER BY count desc;
